@@ -2,9 +2,17 @@
 use_default_settings: true
 server:
   # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
-  secret_key: "ultrasecretkey"  # change this!
-  limiter: true  # can be disabled for a private instance
+  secret_key: "d012c35fdd3aa3bb9a567ac850f51262877426fd89e826c365705b17d362519c"  # change this!
+  limiter: false  # can be disabled for a private instance
+  public_instance: false
   image_proxy: true
+search:
+  default_lang: "zh-CN"
+  # remove format to deny access, use lower case.
+  # formats: [html, csv, json, rss]
+  formats:
+    - html
+    - json
 ui:
   static_use_hash: true
 redis:
